@@ -15,3 +15,7 @@ resource "aws_instance" "dev-server1" {
     }
   
 }
+
+output "instance_ip_addr" {
+  value = aws_instance.dev-server1.private_ip
+}
